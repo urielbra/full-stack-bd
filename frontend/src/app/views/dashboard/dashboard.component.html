@@ -1,0 +1,57 @@
+<div class="topBar">
+  <div class="firstDiv"><label class="welcome">Olá, {{nomeUser}}!</label><img (click)="logOut()" class="exitIcon"
+      src="../../../assets/exit2.png" /></div>
+  <div class="secondDiv">
+    <span class="boxInfo">{{diaFormatado}}</span>
+    <span class="boxInfo">{{dataFormatada}}</span>
+    <span class="boxInfo">{{horaFormatada}}</span>
+  </div>
+</div>
+<div style="text-align: center;     margin-bottom: 50px;">
+  <img style="margin-top: 50px; width:320px; height: 36px;" src="../../../assets/main.png" />
+</div>
+
+<div class="row displayPosts">
+  <div *ngFor="let lembrete of lembretes" class="col-xs-6 col-sm-4 col-md-3">
+    <span class="postit">
+      <div class="titleDiv">
+        <label [swal]="editSwal" (click)="editData(lembrete)" class="postTitle">
+          {{lembrete.Title}}
+        </label>
+        <img (click)="deletePost(lembrete)" class="deleteIcon" src="../../../assets/delete.png"/>
+        <!-- <img (click)="deletePost(lembrete)" class="deleteIconR" src="../../../assets/deleteR.png"/> -->
+      </div>
+      <div [swal]="editSwal" (click)="editData(lembrete)" class="textDiv">
+        <p class="postData">
+          {{lembrete.Text}}
+        </p>
+      </div>
+
+
+    </span>
+  </div>
+</div>
+
+
+<div [swal]="confirmSwal"  class="createNew"><img class="plusIcon" src="../../../assets/plus.png" /></div>
+
+
+
+<swal [options]="{ confirmButtonText: 'Criar!' }" (confirm)="createPost()" #confirmSwal [showConfirmButton]="true" [showCloseButton]="true" class="">
+    <div *swalPartial class="alert confirm-swal">
+      <h2 class="novoLembrete">Novo Lembrete</h2>
+      <textarea [(ngModel)] = "newPostTitle" style="padding-top: 9px;" class="inputTitulo" type="text" placeholder="Título"></textarea>
+      <textarea [(ngModel)] = "newPostText"  style="padding-top: 9px;" class="inputTexto" type="text" placeholder="Texto"></textarea>
+  
+    </div>
+  </swal>
+
+
+  <swal [options]="{ confirmButtonText: 'Editar!' }" (confirm)="editPost()" #editSwal [showConfirmButton]="true" [showCloseButton]="true" class="">
+      <div *swalPartial class="alert confirm-swal">
+        <h2 class="novoLembrete">Editar Lembrete</h2>
+        <textarea [(ngModel)] = "editPostTitle" [placeholder]="editPostTitle" style="padding-top: 9px;" class="inputTitulo" type="text"></textarea>
+        <textarea [(ngModel)] = "editPostText" [placeholder]="editPostText"   style="padding-top: 9px;" class="inputTexto" type="text" ></textarea>
+      </div>
+    </swal>
+

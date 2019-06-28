@@ -1,0 +1,15 @@
+<div class="centerDIV">
+    <div style="margin-top: 200px;">
+    <img style="margin-bottom: 50px;" class="maxLogo" src="../../../assets/title.png"/>
+    <img style="" class="minLogo" src="../../../assets/logo.png"/>
+    
+        <div class="nicebox">
+            <div style="text-align: left;"><img [routerLink]="login" style=" cursor: pointer; width: 27px; height: 20px;" src="../../../assets/back.png"/></div>
+            <nice-input (keyup.enter)="login()"  (textOutput) = "getEmail($event)" [type]="'text'" [placeh]="'E-mail'" ></nice-input>
+            <nice-input (keyup.enter)="login()"  (textOutput) = "getPassword($event)" [type]="'password'" [placeh]="'Senha'" ></nice-input>
+            <nice-input (keyup.enter)="login()"  (textOutput) = "getPassword2($event)" [type]="'password'" [placeh]="'Confirme a Senha'" ></nice-input>
+            <nice-button (click)="login()" [goClick]="'/main'" [canClick]= "fulled()" [placeh]="'CADASTRAR'"></nice-button>
+          </div>
+  
+    </div>
+  </div>

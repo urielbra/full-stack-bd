@@ -1,0 +1,133 @@
+/* You can add global styles to this file, and also import other style files */
+$fonte-padrao : Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;
+$cinza-claro: #75777a;
+$laranja: #ffb600;
+$postit-color: #ffc;
+
+body{
+    font-family: $fonte-padrao;  
+    margin: 0;
+    outline: none;
+    background-color: #fcfcfc;
+}
+
+.nicebox .button{
+    margin-top: 50px !important;
+}
+
+.nicebox{
+    padding: 25px 35px 45px !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #02820d;
+    border-color: #02823f;
+    outline: none;
+    width: 140px;
+}
+
+.btn-primary:focus {
+    color: #fff;
+    background-color: #02820d;
+    border-color: #02823f;
+    outline: none;
+    width: 140px;
+}
+
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #02820d;
+    border-color: #02823f;
+    outline: none;
+    width: 140px;
+}
+
+.btn-primary:active {
+    color: #fff;
+    background-color: #02820d;
+    border-color: #02823f;
+    outline: none;
+    width: 140px;
+}
+
+$darker-green: #02820d;
+$disabled: #666666;
+.button {
+    background-color: $darker-green; /* Green */
+    border: none;
+    font-family: $fonte-padrao;
+    color: white;
+    outline: 0;
+    padding: 7px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 80%;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .buttonspecActive {
+    background-color: white; 
+    color: black; 
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid $darker-green;
+  }
+  
+  .buttonspecActive:hover {
+    background-color: $darker-green;
+    color: white;
+  }
+
+  .buttonspecDisable {
+    background-color: white; 
+    color: black; 
+    cursor: not-allowed;
+    border-radius: 8px;
+    border: 2px solid $disabled;
+  }
+  
+  /*Sweet Alert 2*/
+
+  #swal2-content {
+    text-align: center;
+    font-size: 18px;
+}
+.swal2-title {
+    position: relative;
+    max-width: 100%;
+    margin: 0 0 .4em;
+    padding: 0;
+    color: #595959;
+    font-size: 2.875em;
+    font-weight: 600;
+    text-align: center;
+    text-transform: none;
+    word-wrap: break-word;
+}
+.swal2-styled.swal2-confirm {
+    border: 0;
+    border-radius: .25em;
+    background: initial;
+    background-color: #3085d6;
+    color: #fff;
+    font-size: 1.5625em !important; 
+}
+
+.swal2-styled:focus {
+    outline: 0;
+    box-shadow: none !important;
+}
+.swal2-close {
+    -webkit-transform: none;
+    transform: none;
+    background: 0 0;
+    color: #f27474;
+    z-index: 5000;
+}

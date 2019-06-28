@@ -1,0 +1,15 @@
+<div class="centerDIV">
+  <div style="margin-top: 200px;">
+  <img style="margin-bottom: 50px;" class="maxLogo" src="../../../assets/title.png"/>
+  <img style="" class="minLogo" src="../../../assets/logo.png"/>
+  
+      <div class="nicebox">
+          <nice-input (keyup.enter)="login()" (textOutput) = "getEmail($event)" [type]="'text'" [placeh]="'E-mail'" ></nice-input>
+          <nice-input (keyup.enter)="login()" (textOutput) = "getPassword($event)" [type]="'password'" [placeh]="'Senha'" ></nice-input>
+          <nice-button (click)="login()" [goClick]="'/main'" [canClick]= "fulled()" [placeh]="'ENTRAR'"></nice-button>
+          <h2 class="question">Precisando Lembrar-se das coisas?</h2>
+          <div  style="width: auto; outline: none; cursor: pointer;"><a [routerLink]="['/signup']" style="font-size: 17px;" >Registre-se aqui!</a></div>
+        </div>
+
+  </div>
+</div>
